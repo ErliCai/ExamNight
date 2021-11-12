@@ -6,6 +6,7 @@ TagManager:
   tags:
   - player
   - Note
+  - Friend
   layers:
   - Default
   - TransparentFX

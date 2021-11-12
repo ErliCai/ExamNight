@@ -36,7 +36,7 @@ public class Collide : MonoBehaviour
   public void UpdateTime(){
       Text timeTextB = timeText.GetComponent<Text>();
       timeTextB.text = "TIME: " + gameTime;
-  }
+  } 
     
     //Collect note
     void OnCollisionEnter2D(Collision2D other){
@@ -50,7 +50,10 @@ public class Collide : MonoBehaviour
         }
         else if (enemy.gameObject.tag == "Note"){
             GameHandler.scoreValue += 1;        
-        }        
+        }
+        else if (enemy.gameObject.tag == "Friend"){
+            SceneManager.LoadScene("LoseFriend");
+        }    
         Destroy(enemy);
     }
     
