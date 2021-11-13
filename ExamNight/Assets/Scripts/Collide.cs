@@ -13,6 +13,7 @@ public class Collide : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
+        Physics2D.IgnoreLayerCollision(7, 8);
         UpdateTime();
     }
 
@@ -47,14 +48,30 @@ public class Collide : MonoBehaviour
             } else {
                 SceneManager.LoadScene("WinC");                                                   // restart same level
             }
+            Destroy(enemy);
         }
         else if (enemy.gameObject.tag == "Note"){
-            GameHandler.scoreValue += 1;        
+          if (other.gameObject.tag == "Player"){
+            GameHandler.scoreValue += 1; 
+            Destroy(enemy);
+          }   
         }
+        // if player touch friend
         else if (enemy.gameObject.tag == "Friend"){
-            SceneManager.LoadScene("LoseFriend");
+          Vector3 contactPoint = other.contacts[0].point;
+          Vector3 center = enemy.GetComponent<Collider2D>().bounds.center;
+          if (other.gameObject.tag == "Player"){
+            Debug.Log(center.y);
+            Debug.Log(contactPoint.y);
+            if (contactPoint.y - center.y < 0.4){
+              SceneManager.LoadScene("LoseFriend");
+              Destroy(enemy);
+              }
+            else{
+              Destroy(enemy);
+            }
+          }
         }    
-        Destroy(enemy);
     }
     
 }
