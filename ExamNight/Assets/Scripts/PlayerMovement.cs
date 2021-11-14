@@ -11,12 +11,12 @@ public class PlayerMovement : MonoBehaviour
   public float moveSpeed = 5f;
   public Vector2 movement;
   private float lastJump = 0f;
+ 
 
   // Auto-load the RigidBody component into the variable: 
   void Start(){
         rb = GetComponent<Rigidbody2D> ();
   }
-
   // Listen for player input to move the object: 
   void FixedUpdate(){
         movement.x = Input.GetAxisRaw ("Horizontal");

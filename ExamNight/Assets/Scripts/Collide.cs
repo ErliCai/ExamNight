@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class Collide : MonoBehaviour
 {
     public GameObject enemy;
-    public int gameTime = 20;
+    private int gameTime = 20;
     private float gameTimer = 0f;
     public GameObject timeText;
+    public Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -43,17 +45,29 @@ public class Collide : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){
         //if the player gets to the door
         if (enemy.gameObject.tag == "Finish"){
-            if (GameHandler.scoreValue == 2){
+            if (GameHandler.scoreValue >= 3){
                 SceneManager.LoadScene("WinA");                                                   // restart same level
             } else {
                 SceneManager.LoadScene("WinC");                                                   // restart same level
             }
             Destroy(enemy);
         }
+        if (enemy.gameObject.tag == "Room2"){
+                SceneManager.LoadScene("Room2"); 
+        }
+        if (enemy.gameObject.tag == "Room1"){
+                SceneManager.LoadScene("IntroLevel"); 
+        }
         else if (enemy.gameObject.tag == "Note"){
           if (other.gameObject.tag == "Player"){
             GameHandler.scoreValue += 1; 
             Destroy(enemy);
+          }   
+        } else if (enemy.gameObject.tag == "Ramen"){
+          if (other.gameObject.tag == "Player"){
+            Destroy(enemy);
+            rb.gravityScale = 0.4f;
+            //TODO:APPLY OVER LIMITED TIME
           }   
         }
         // if player touch friend
