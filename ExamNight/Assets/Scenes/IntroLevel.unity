@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTransform: {fileID: 540199159}
+  timeText: {fileID: 672545892}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -858,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 7769069379316636196, guid: f78a474f92d154bf5850bd8a356f0490, type: 3}
       propertyPath: timeText
       value: 
-      objectReference: {fileID: 672545892}
+      objectReference: {fileID: 0}
     - target: {fileID: 7769069379316636206, guid: f78a474f92d154bf5850bd8a356f0490, type: 3}
       propertyPath: m_Name
       value: Note (1)
@@ -1013,7 +1014,7 @@ PrefabInstance:
     - target: {fileID: 3041164337044861360, guid: ce2a71be03a05497fb5eacf970fabc82, type: 3}
       propertyPath: timeText
       value: 
-      objectReference: {fileID: 672545892}
+      objectReference: {fileID: 0}
     - target: {fileID: 3041164337044861361, guid: ce2a71be03a05497fb5eacf970fabc82, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1151,7 +1152,7 @@ PrefabInstance:
     - target: {fileID: 7614807757486270498, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
       propertyPath: timeText
       value: 
-      objectReference: {fileID: 672545892}
+      objectReference: {fileID: 0}
     - target: {fileID: 7614807757486270500, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1273,7 +1274,7 @@ PrefabInstance:
     - target: {fileID: 7946664890363542724, guid: 7048049d4e50f44618eeae5357544a25, type: 3}
       propertyPath: timeText
       value: 
-      objectReference: {fileID: 672545892}
+      objectReference: {fileID: 0}
     - target: {fileID: 7946664890363542727, guid: 7048049d4e50f44618eeae5357544a25, type: 3}
       propertyPath: m_Name
       value: Friend

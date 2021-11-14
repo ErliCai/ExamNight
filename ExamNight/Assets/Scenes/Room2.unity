@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 684055747}
   - component: {fileID: 684055746}
   - component: {fileID: 684055745}
+  - component: {fileID: 684055748}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -416,6 +417,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684055748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684055744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d3c39e89ccb428fa683464c235af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTransform: {fileID: 1708425088}
+  timeText: {fileID: 1205791988}
 --- !u!1001 &696869537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -426,7 +441,7 @@ PrefabInstance:
     - target: {fileID: 3041164337044861360, guid: ce2a71be03a05497fb5eacf970fabc82, type: 3}
       propertyPath: timeText
       value: 
-      objectReference: {fileID: 1205791988}
+      objectReference: {fileID: 0}
     - target: {fileID: 3041164337044861361, guid: ce2a71be03a05497fb5eacf970fabc82, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -718,6 +733,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205791988}
   m_CullTransparentMesh: 1
+--- !u!4 &1708425088 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5106347870249237739, guid: 802a4d17dc14845bf9052486e06249a4, type: 3}
+  m_PrefabInstance: {fileID: 591842147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1798873577
 PrefabInstance:
   m_ObjectHideFlags: 0
