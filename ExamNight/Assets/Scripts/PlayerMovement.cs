@@ -27,7 +27,9 @@ public class PlayerMovement : MonoBehaviour
               rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
               lastJump = Time.time;
             }
+
         }
+
   } 
 
   // Makes objects with the tag "tree" disappear on contact: 
