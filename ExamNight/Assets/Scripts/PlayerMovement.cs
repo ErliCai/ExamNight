@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw ("Horizontal");
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
-        if (Input.GetKey(KeyCode.Space)){
+        if (Input.GetKey(KeyCode.Space) | Input.GetKeyDown(KeyCode.UpArrow)){
             if (Time.time > lastJump + 1) {
               rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
               lastJump = Time.time;

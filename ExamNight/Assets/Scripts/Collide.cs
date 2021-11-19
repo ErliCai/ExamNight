@@ -8,6 +8,7 @@ public class Collide : MonoBehaviour
 {
     public GameObject enemy;
     public Rigidbody2D rb;
+    public PlayerMovement MyMovement;
 
 
     // Start is called before the first frame update
@@ -45,7 +46,7 @@ public class Collide : MonoBehaviour
         } else if (enemy.gameObject.tag == "Ramen"){
           if (other.gameObject.tag == "Player"){
             Destroy(enemy);
-            rb.gravityScale = 0.4f;
+            MyMovement.moveSpeed = 10f;
             //TODO:APPLY OVER LIMITED TIME
           }   
         }
