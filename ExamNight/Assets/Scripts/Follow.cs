@@ -11,9 +11,11 @@ public class Follow : MonoBehaviour
     public static float gameTime = 20;
     private float gameTimer = 0f;
     public GameObject timeText;
+    public bool TutorialLevel;
     
     void Start(){
         UpdateTime();
+        if (TutorialLevel) {gameTime += 180;}
     }
     
     void FixedUpdate()

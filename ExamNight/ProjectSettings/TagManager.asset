@@ -10,6 +10,7 @@ TagManager:
   - Ramen
   - Room2
   - Room1
+  - CheckFalling
   layers:
   - Default
   - TransparentFX

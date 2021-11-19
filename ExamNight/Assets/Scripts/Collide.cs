@@ -35,6 +35,9 @@ public class Collide : MonoBehaviour
         if (enemy.gameObject.tag == "Room2"){
                 SceneManager.LoadScene("Room2"); 
         }
+        if (enemy.gameObject.tag == "CheckFalling"){
+                SceneManager.LoadScene("LoseFriend"); 
+        }
         if (enemy.gameObject.tag == "Room1"){
                 SceneManager.LoadScene("IntroLevel"); 
         }
