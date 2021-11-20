@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
             if (Time.time > lastJump + 2) {
               rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
               lastJump = Time.time;
+                animator.SetBool("IsJumping", true);
             }
 
         }
