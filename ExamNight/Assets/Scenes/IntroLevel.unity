@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1280253262}
     - target: {fileID: 5886366002189882275, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -287,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTransform: {fileID: 1937886607}
   timeText: {fileID: 672545892}
+  TutorialLevel: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -751,6 +756,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200838737}
   m_CullTransparentMesh: 1
+--- !u!95 &1280253262 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5886366002189882279, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+  m_PrefabInstance: {fileID: 1679171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1378220215
 GameObject:
   m_ObjectHideFlags: 0

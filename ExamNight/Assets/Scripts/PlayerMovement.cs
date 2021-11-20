@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
   public float moveSpeed = 5f;
   public Vector2 movement;
   private float lastJump = 0f;
+  public Animator animator;
  
 
   // Auto-load the RigidBody component into the variable: 
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw ("Horizontal");
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(movement.x));
         if (Input.GetKey(KeyCode.Space) | Input.GetKeyDown(KeyCode.UpArrow)){
             if (Time.time > lastJump + 2) {
               rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
