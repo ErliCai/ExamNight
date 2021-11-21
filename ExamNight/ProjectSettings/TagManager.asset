@@ -11,6 +11,8 @@ TagManager:
   - Room2
   - Room1
   - CheckFalling
+  - Lib
+  - Dorm
   layers:
   - Default
   - TransparentFX

@@ -8,14 +8,14 @@ using UnityEngine.UI;
 public class Follow : MonoBehaviour
 {
     public Transform followTransform;
-    public static float gameTime = 20;
+    public static float gameTime = 200;
     private float gameTimer = 0f;
     public GameObject timeText;
     public bool TutorialLevel;
     
     void Start(){
         UpdateTime();
-        if (TutorialLevel) {gameTime += 180;}
+        if (TutorialLevel) {gameTime += 50;}
     }
     
     void FixedUpdate()

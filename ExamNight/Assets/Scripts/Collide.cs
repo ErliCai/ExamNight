@@ -25,15 +25,24 @@ public class Collide : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){
         //if the player gets to the door
         if (enemy.gameObject.tag == "Finish"){
-            if (GameHandler.scoreValue >= 3){
-                SceneManager.LoadScene("WinA");                                                   // restart same level
+            if (GameHandler.scoreValue >= 5){
+                SceneManager.LoadScene("WinA");  
+            } else if (GameHandler.scoreValue == 4){
+                SceneManager.LoadScene("WinB");                                                   // restart same level 
+            } else if (GameHandler.scoreValue >= 2){ 
+                SceneManager.LoadScene("WinC");                                                   // restart same level                                                    // restart same level
+            } else if (GameHandler.scoreValue == 1){ 
+                SceneManager.LoadScene("WinD");                                                   // restart same level                                                    // restart same level                                                    // restart same level                                                    // restart same level
             } else {
-                SceneManager.LoadScene("WinC");                                                   // restart same level
+                SceneManager.LoadScene("WinF");                                                   // restart same level                                                    // restart same level                                                    // restart same level                                                    // restart same level
             }
             Destroy(enemy);
         }
-        if (enemy.gameObject.tag == "Room2"){
-                SceneManager.LoadScene("Room2"); 
+        if (enemy.gameObject.tag == "Lib"){
+                SceneManager.LoadScene("Library"); 
+        }
+        if (enemy.gameObject.tag == "Dorm"){
+                SceneManager.LoadScene("DormRoom"); 
         }
         if (enemy.gameObject.tag == "CheckFalling"){
                 SceneManager.LoadScene("LoseFriend"); 

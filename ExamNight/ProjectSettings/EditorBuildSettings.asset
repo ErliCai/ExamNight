@@ -12,11 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/DormRoom.unity
+    guid: 3dceffb631e3045099102e456b3339ba
+  - enabled: 1
     path: Assets/Scenes/Room2.unity
     guid: 2ab13f2e2e6d64107a729c2baa07d87a
   - enabled: 1
+    path: Assets/Scenes/WinF.unity
+    guid: c01a1e103042e47a4ab7fd666bdf84e8
+  - enabled: 1
     path: Assets/Scenes/WinA.unity
     guid: 2b4b206f09c7648dc951b27bc10e0155
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 2365e7f8b7e0249f9a9fea75864b96ef
   - enabled: 1
     path: Assets/Scenes/WinC.unity
     guid: 96d4cef48bd5b42b6994c620c7883248
