@@ -13,14 +13,12 @@ public class PlayerMovement : MonoBehaviour
   private float lastJump = 0f;
   public Animator animator;
     
-    [HideInInspector]
-    public bool isFacingLeft;
-    [HideInInspector]
-    public bool isFacingRight;
-    [HideInInspector]
-    public bool isJumping;
+    //[HideInInspector]
+    //public bool isFacingLeft;
+    //[HideInInspector]
+    
 
-    private Vector2 facingLeft;
+    //private Vector2 facingLeft;
 
     //protected virtual void initialization()
     //{
@@ -45,19 +43,26 @@ public class PlayerMovement : MonoBehaviour
         //isFacingLeft = false;
         //isFacingRight = true;
         //isJumping = false;
-  }
+    }
   // Listen for player input to move the object: 
   void FixedUpdate(){
         movement.x = Input.GetAxisRaw ("Horizontal");
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
         animator.SetFloat("Speed", Mathf.Abs(movement.x));
-        //if (movement.x > 0 && )
+        if (movement.x > 0)
+        {
+            animator.SetBool("lastLeft", false);
+        }
+        else if (movement.x < 0)
+        {
+            animator.SetBool("lastLeft", true);
+        }
         if (Input.GetKey(KeyCode.Space) | Input.GetKeyDown(KeyCode.UpArrow)){
             if (Time.time > lastJump + 2) {
               rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
               lastJump = Time.time;
-                animator.SetBool("IsJumping", true);
+                //animator.SetBool("IsJumping", true);
             }
 
         }

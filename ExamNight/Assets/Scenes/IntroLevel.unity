@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 1280253262}
+      objectReference: {fileID: 1110028709}
     - target: {fileID: 5886366002189882275, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5886366002189882278, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
@@ -607,6 +607,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 206a26f54b4ee4a68a700902042eac5e, type: 3}
+--- !u!95 &1110028709 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4116095247145443644, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+  m_PrefabInstance: {fileID: 1679171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1200838737
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,11 +704,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200838737}
   m_CullTransparentMesh: 1
---- !u!95 &1280253262 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5886366002189882279, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
-  m_PrefabInstance: {fileID: 1679171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1378220215
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 875601703904804155, guid: 206a26f54b4ee4a68a700902042eac5e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 875601703904804155, guid: 206a26f54b4ee4a68a700902042eac5e, type: 3}
       propertyPath: m_LocalPosition.x
