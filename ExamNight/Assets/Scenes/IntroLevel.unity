@@ -779,6 +779,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce2a71be03a05497fb5eacf970fabc82, type: 3}
+--- !u!1 &962522953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7614807757486270497, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
+  m_PrefabInstance: {fileID: 7614807756172301048}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &962522954
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962522953}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4151b2693a0d41a6b40f8f8efd68c64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1074430311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1016,6 +1040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306465092}
   - component: {fileID: 1306465093}
+  - component: {fileID: 1306465094}
   m_Layer: 5
   m_Name: Clock9
   m_TagString: Untagged
@@ -1089,6 +1114,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1306465094
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306465091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d20a3a74dbeb643ac9ffe1bd8bd1dada, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1378220215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1235,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1813676172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7946664889535404512, guid: 7048049d4e50f44618eeae5357544a25, type: 3}
+  m_PrefabInstance: {fileID: 7946664890547681802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1813676175
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813676172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1364448b5b6549c19f42e4656a68850, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1825353991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1503,6 +1571,14 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7614807757486270500, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614807757486270500, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614807757486270500, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
       objectReference: {fileID: 0}
@@ -1551,6 +1627,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7946664889535404513, guid: 7048049d4e50f44618eeae5357544a25, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946664889535404513, guid: 7048049d4e50f44618eeae5357544a25, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7946664890363542724, guid: 7048049d4e50f44618eeae5357544a25, type: 3}
       propertyPath: timeText
       value: 
