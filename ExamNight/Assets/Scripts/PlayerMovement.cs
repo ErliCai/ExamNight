@@ -8,10 +8,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
   public Rigidbody2D rb;
+  public GameObject player;
   public float moveSpeed = 5f;
   public Vector2 movement;
   private float lastJump = 0f;
   public Animator animator;
+  bool canJump = false;
+  public float lastHeight = 0f;
+  private float contactPoint = 0f;
     
     //[HideInInspector]
     //public bool isFacingLeft;
@@ -44,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         //isFacingRight = true;
         //isJumping = false;
     }
+
   // Listen for player input to move the object: 
   void FixedUpdate(){
         movement.x = Input.GetAxisRaw ("Horizontal");
@@ -58,10 +63,12 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("lastLeft", true);
         }
+      
         if (Input.GetKey(KeyCode.Space) | Input.GetKeyDown(KeyCode.UpArrow)){
-            if (Time.time > lastJump + 2) {
+            if (canJump) {
               rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
               lastJump = Time.time;
+              canJump = false;
                 //animator.SetBool("IsJumping", true);
             }
 
@@ -71,7 +78,8 @@ public class PlayerMovement : MonoBehaviour
 
   // Makes objects with the tag "tree" disappear on contact: 
   void OnCollisionEnter2D(Collision2D other){
-        if (other.gameObject.tag == ""){
-        }
+        if (other.gameObject.tag == "Ground"){
+      canJump = true;
+    }
   }
 } 

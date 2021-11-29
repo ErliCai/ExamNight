@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7769069379316636196}
   m_Layer: 0
   m_Name: Note
-  m_TagString: Untagged
+  m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7769069379316636206}
-  gameTime: 20
-  timeText: {fileID: 0}
+  rb: {fileID: 0}
+  MyMovement: {fileID: 0}
 --- !u!1 &7769069379752116856
 GameObject:
   m_ObjectHideFlags: 0
