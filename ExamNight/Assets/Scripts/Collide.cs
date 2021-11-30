@@ -69,7 +69,7 @@ public class Collide : MonoBehaviour
           if (other.gameObject.tag == "Player"){
             Debug.Log(center.y);
             Debug.Log(contactPoint.y);
-            if (contactPoint.y - center.y < 0.4){
+            if (contactPoint.y - center.y < enemy.GetComponent<BoxCollider2D>().size.y / 2 - 0.02){
               SceneManager.LoadScene("LoseFriend");
               Destroy(enemy);
               }
