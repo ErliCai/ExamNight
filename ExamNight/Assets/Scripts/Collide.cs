@@ -9,6 +9,7 @@ public class Collide : MonoBehaviour
     public GameObject enemy;
     public Rigidbody2D rb;
     public PlayerMovement MyMovement;
+    public float new_speed = 10f;
 
 
     // Start is called before the first frame update
@@ -58,7 +59,7 @@ public class Collide : MonoBehaviour
         } else if (enemy.gameObject.tag == "Ramen"){
           if (other.gameObject.tag == "Player"){
             Destroy(enemy);
-            MyMovement.moveSpeed = 10f;
+            MyMovement.moveSpeed = new_speed;
             //TODO:APPLY OVER LIMITED TIME
           }   
         }
@@ -67,8 +68,8 @@ public class Collide : MonoBehaviour
           Vector3 contactPoint = other.contacts[0].point;
           Vector3 center = enemy.GetComponent<Collider2D>().bounds.center;
           if (other.gameObject.tag == "Player"){
-            Debug.Log(center.y);
-            Debug.Log(contactPoint.y);
+            // Debug.Log(center.y);
+            // Debug.Log(contactPoint.y);
             if (contactPoint.y - center.y < enemy.GetComponent<BoxCollider2D>().size.y / 2 - 0.02){
               SceneManager.LoadScene("LoseFriend");
               Destroy(enemy);

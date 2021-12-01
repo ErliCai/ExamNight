@@ -78,8 +78,8 @@ public class PlayerMovement : MonoBehaviour
 
   // Makes objects with the tag "tree" disappear on contact: 
   void OnCollisionEnter2D(Collision2D other){
-      
+      if (other.gameObject.tag != "Note"){
       canJump = true;
-    
+      }
   }
 } 
