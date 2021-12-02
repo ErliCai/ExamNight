@@ -1,22 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
-
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
-{
-  public Rigidbody2D rb;
-  public GameObject player;
-  public float moveSpeed = 5f;
-  public Vector2 movement;
-  private float lastJump = 0f;
-  public Animator animator;
-  bool canJump = false;
-  public float lastHeight = 0f;
-  private float contactPoint = 0f;
-    
+{	
+	public Rigidbody2D rb;
+	public GameObject player;
+	public float moveSpeed = 5f;
+	public Vector2 movement;
+	private float lastJump = 0f;
+	public Animator animator;
+	bool canJump = false;
+	public float lastHeight = 0f;
+	private float contactPoint = 0f;
+  
     //[HideInInspector]
     //public bool isFacingLeft;
     //[HideInInspector]
@@ -47,6 +45,12 @@ public class PlayerMovement : MonoBehaviour
         //isFacingLeft = false;
         //isFacingRight = true;
         //isJumping = false;
+		
+		string thisLevel = SceneManager.GetActiveScene().name;
+		if (thisLevel == "IntroLevel"){
+			gameObject.transform.position = GameHandler.playerLastPos;
+		}
+		
     }
 
   // Listen for player input to move the object: 
@@ -64,12 +68,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("lastLeft", true);
         }
       
-        if (Input.GetKey(KeyCode.Space) | Input.GetKeyDown(KeyCode.UpArrow)){
+        if (Input.GetButtonDown("Jump")){
             if (canJump) {
               rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
               lastJump = Time.time;
               canJump = false;
-                //animator.SetBool("IsJumping", true);
+              animator.SetTrigger("Jump");
             }
 
         }

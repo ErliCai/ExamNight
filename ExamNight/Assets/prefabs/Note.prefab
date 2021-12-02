@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7769069379316636194}
   - component: {fileID: 7769069379316636195}
   - component: {fileID: 7769069379316636196}
+  - component: {fileID: 8740865855505713625}
   m_Layer: 7
   m_Name: Note
   m_TagString: Note
@@ -65,7 +66,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.3}
@@ -88,7 +89,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7769069379316636206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ca85a5f627c44f889547acd16d7115a, type: 3}
   m_Name: 
@@ -96,6 +97,27 @@ MonoBehaviour:
   enemy: {fileID: 7769069379316636206}
   rb: {fileID: 0}
   MyMovement: {fileID: 0}
+  new_speed: 10
+  open: 0
+  pickUpName: 
+--- !u!114 &8740865855505713625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769069379316636206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cab8a685581feb43a9f93a8728db904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  MyMovement: {fileID: 0}
+  new_speed: 10
+  open: 0
+  hasRamen: 0
+  pickUpName: 
 --- !u!1 &7769069379752116856
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 70
   m_Sprite: {fileID: 21300000, guid: 271d3d58bcbb7441ba6358cc9529f45a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

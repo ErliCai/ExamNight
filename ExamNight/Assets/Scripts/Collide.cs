@@ -15,10 +15,16 @@ public class Collide : MonoBehaviour
     public bool open = false;
     public static bool hasRamen = false;
 
+	public string pickUpName;
+	private GameHandler gameHandler;
 
     // Start is called before the first frame update
     void Start() {
         Physics2D.IgnoreLayerCollision(7, 8);
+		
+		if (GameObject.FindWithTag("GameHandler") != null){
+			gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
+		}
     }
 
     void Update() {
@@ -84,6 +90,7 @@ public class Collide : MonoBehaviour
         else if (enemy.gameObject.tag == "Note"){
           if (other.gameObject.tag == "Player"){
             GameHandler.scoreValue += 1; 
+			gameHandler.gotNote(pickUpName);
             Destroy(enemy);
           }   
         } else if (enemy.gameObject.tag == "Ramen"){
