@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections.Generic;
+
 
 public class Collide : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class Collide : MonoBehaviour
     public Rigidbody2D rb;
     public PlayerMovement MyMovement;
     public float new_speed = 10f;
+    public bool open = false;
+    public static bool hasRamen = false;
 
 
     // Start is called before the first frame update
@@ -18,39 +22,65 @@ public class Collide : MonoBehaviour
     }
 
     void Update() {
-        
+        if(Input.GetKey("e")){
+            open = true;
+            StartCoroutine(door());
+        }
+        if(hasRamen){
+            StartCoroutine(Ramen());
+            //TODO
+            //SET PLAYER SPEED BACK HERE
+            //Add timer
+        }   
+
     }
     
+    IEnumerator door(){
+        yield return new WaitForSeconds(3f);
+        open = false;
+    }
+    
+    IEnumerator Ramen(){
+        yield return new WaitForSeconds(3f);
+}
     
     //Collect note
     void OnCollisionEnter2D(Collision2D other){
         //if the player gets to the door
-        if (enemy.gameObject.tag == "Finish"){
-            if (GameHandler.scoreValue >= 5){
-                SceneManager.LoadScene("WinA");  
-            } else if (GameHandler.scoreValue == 4){
-                SceneManager.LoadScene("WinB");                                                   // restart same level 
-            } else if (GameHandler.scoreValue >= 2){ 
-                SceneManager.LoadScene("WinC");                                                   // restart same level                                                    // restart same level
-            } else if (GameHandler.scoreValue == 1){ 
-                SceneManager.LoadScene("WinD");                                                   // restart same level                                                    // restart same level                                                    // restart same level                                                    // restart same level
-            } else {
-                SceneManager.LoadScene("WinF");                                                   // restart same level                                                    // restart same level                                                    // restart same level                                                    // restart same level
+        if(open){
+            if (enemy.gameObject.tag == "Finish"){
+                if (GameHandler.scoreValue >= 5){
+                    SceneManager.LoadScene("WinA");
+                    Destroy(enemy); 
+                    GameHandler.scoreValue = 0; 
+                } else if (GameHandler.scoreValue == 4){
+                    SceneManager.LoadScene("WinB");
+                    Destroy(enemy);
+                    GameHandler.scoreValue = 0; 
+                } else if (GameHandler.scoreValue >= 2){ 
+                    SceneManager.LoadScene("WinC");
+                    Destroy(enemy);         
+                    GameHandler.scoreValue = 0;                           
+                } else if (GameHandler.scoreValue == 1){ 
+                    SceneManager.LoadScene("WinD");
+                    Destroy(enemy);
+                    GameHandler.scoreValue = 0;                         
+                }
             }
-            Destroy(enemy);
+            if (enemy.gameObject.tag == "Lib"){
+                    SceneManager.LoadScene("Library"); 
+            }
+            if (enemy.gameObject.tag == "Dorm"){
+                    SceneManager.LoadScene("DormRoom"); 
+            }
+            if (enemy.gameObject.tag == "CheckFalling"){
+                    SceneManager.LoadScene("LoseFriend"); 
+            }
+            if (enemy.gameObject.tag == "Room1"){
+                    SceneManager.LoadScene("IntroLevel"); 
+            }
         }
-        if (enemy.gameObject.tag == "Lib"){
-                SceneManager.LoadScene("Library"); 
-        }
-        if (enemy.gameObject.tag == "Dorm"){
-                SceneManager.LoadScene("DormRoom"); 
-        }
-        if (enemy.gameObject.tag == "CheckFalling"){
-                SceneManager.LoadScene("LoseFriend"); 
-        }
-        if (enemy.gameObject.tag == "Room1"){
-                SceneManager.LoadScene("IntroLevel"); 
-        }
+        // end check here
         else if (enemy.gameObject.tag == "Note"){
           if (other.gameObject.tag == "Player"){
             GameHandler.scoreValue += 1; 
@@ -60,7 +90,8 @@ public class Collide : MonoBehaviour
           if (other.gameObject.tag == "Player"){
             Destroy(enemy);
             MyMovement.moveSpeed = new_speed;
-            //TODO:APPLY OVER LIMITED TIME
+            hasRamen = true;    
+            StartCoroutine(Ramen());   
           }   
         }
         // if player touch friend
