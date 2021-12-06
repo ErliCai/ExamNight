@@ -15,6 +15,7 @@ public class Collide : MonoBehaviour
     public bool open = false;
     public static bool hasRamen = false;
 
+
 	public string pickUpName;
 	private GameHandler gameHandler;
 
@@ -32,23 +33,12 @@ public class Collide : MonoBehaviour
             open = true;
             StartCoroutine(door());
         }
-        if(hasRamen){
-            StartCoroutine(Ramen());
-            //TODO
-            //SET PLAYER SPEED BACK HERE
-            //Add timer
-        }   
-
     }
     
     IEnumerator door(){
         yield return new WaitForSeconds(3f);
         open = false;
     }
-    
-    IEnumerator Ramen(){
-        yield return new WaitForSeconds(3f);
-}
     
     //Collect note
     void OnCollisionEnter2D(Collision2D other){
@@ -95,10 +85,8 @@ public class Collide : MonoBehaviour
           }   
         } else if (enemy.gameObject.tag == "Ramen"){
           if (other.gameObject.tag == "Player"){
-            Destroy(enemy);
             MyMovement.moveSpeed = new_speed;
-            hasRamen = true;    
-            StartCoroutine(Ramen());   
+            hasRamen = true;
           }   
         }
         // if player touch friend

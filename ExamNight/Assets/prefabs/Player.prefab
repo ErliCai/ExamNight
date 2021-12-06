@@ -177,5 +177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  player: {fileID: 0}
   moveSpeed: 5
   movement: {x: 0, y: 0}
+  animator: {fileID: 0}
+  lastHeight: 0
+  booster: {fileID: 0}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {	
@@ -14,6 +15,12 @@ public class PlayerMovement : MonoBehaviour
 	bool canJump = false;
 	public float lastHeight = 0f;
 	private float contactPoint = 0f;
+	public GameObject booster;
+	public GameObject bText;
+	public static float bTime = 10;
+	private float bTimer = 0f;
+
+
   
     //[HideInInspector]
     //public bool isFacingLeft;
@@ -77,8 +84,36 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-
+		if(Collide.hasRamen){
+			StartCoroutine(Boost());
+			bTimer += 0.02f;
+	        if (bTimer >= 1f){
+	                    bTime -= 1f;
+	                    bTimer = 0;
+	        }
+			Text timeTextC = bText.GetComponent<Text>();
+	        timeTextC.text = "RAMEN TIME: " + bTime; 
+		} else {
+			Text timeTextC = bText.GetComponent<Text>();
+			timeTextC.text = " "; 
+		}
   } 
+  
+  IEnumerator Boost()
+    {
+		
+		booster.SetActive(false);
+        //Print the time of when the function is first called.
+        Debug.Log("Boost");
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(10);
+
+        //After we have waited 5 seconds print the time again.
+		Collide.hasRamen = false;
+		moveSpeed = 5;
+		booster.SetActive(true);
+    }
 
   // Makes objects with the tag "tree" disappear on contact: 
   void OnCollisionEnter2D(Collision2D other){

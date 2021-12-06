@@ -305,6 +305,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+      propertyPath: Ramen
+      value: 
+      objectReference: {fileID: 433105107}
+    - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+      propertyPath: bText
+      value: 
+      objectReference: {fileID: 5011204300456168993}
+    - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+      propertyPath: booster
+      value: 
+      objectReference: {fileID: 433105107}
     - target: {fileID: 5886366002189882275, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -374,6 +386,14 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7614807757486270498, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
+      propertyPath: Ramen
+      value: 
+      objectReference: {fileID: 433105107}
+    - target: {fileID: 7614807757486270498, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
+      propertyPath: booster
+      value: 
+      objectReference: {fileID: 433105107}
     - target: {fileID: 7614807757486270498, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
       propertyPath: timeText
       value: 
@@ -779,6 +799,11 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &433105107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7614807757486270497, guid: f0a6c08f6def5403e97bfc0a87b5aa59, type: 3}
+  m_PrefabInstance: {fileID: 278751875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &440795992
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,3 +3199,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+--- !u!1 &5011204300456168993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7657547021398408712, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+  m_PrefabInstance: {fileID: 5011204300456168992}
+  m_PrefabAsset: {fileID: 0}

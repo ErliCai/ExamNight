@@ -15,7 +15,7 @@ public class Follow : MonoBehaviour
     
     void Start(){
         UpdateTime();
-        if (TutorialLevel) {gameTime += 50;}
+        if (TutorialLevel) {gameTime += 50000000;}
     }
     
     void FixedUpdate()
