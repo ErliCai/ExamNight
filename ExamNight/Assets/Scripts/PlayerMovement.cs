@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 	public GameObject bText;
 	public static float bTime = 10;
 	private float bTimer = 0f;
+	public AudioSource jSound;
+
 
 
   
@@ -77,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
       
         if (Input.GetButtonDown("Jump")){
             if (canJump) {
+			jSound.Play();
               rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
               lastJump = Time.time;
               canJump = false;

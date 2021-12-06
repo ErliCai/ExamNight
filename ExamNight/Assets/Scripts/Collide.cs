@@ -14,6 +14,8 @@ public class Collide : MonoBehaviour
     public float new_speed = 10f;
     public bool open = false;
     public static bool hasRamen = false;
+    public AudioSource upgrade;
+
 
 
 	public string pickUpName;
@@ -76,19 +78,6 @@ public class Collide : MonoBehaviour
                     SceneManager.LoadScene("IntroLevel"); 
             }
         }
-        // end check here
-        else if (enemy.gameObject.tag == "Note"){
-          if (other.gameObject.tag == "Player"){
-            GameHandler.scoreValue += 1; 
-			gameHandler.gotNote(pickUpName);
-            Destroy(enemy);
-          }   
-        } else if (enemy.gameObject.tag == "Ramen"){
-          if (other.gameObject.tag == "Player"){
-            MyMovement.moveSpeed = new_speed;
-            hasRamen = true;
-          }   
-        }
         // if player touch friend
         else if (enemy.gameObject.tag == "Friend"){
           Vector3 contactPoint = other.contacts[0].point;
@@ -104,7 +93,22 @@ public class Collide : MonoBehaviour
               Destroy(enemy);
             }
           }
-        }    
+        }
+            // end check here
+        else if (enemy.gameObject.tag == "Note"){
+              if (other.gameObject.tag == "Player"){
+                GameHandler.scoreValue += 1; 
+    			gameHandler.gotNote(pickUpName);
+                Destroy(enemy);
+              }   
+            } else if (enemy.gameObject.tag == "Ramen"){
+              if (other.gameObject.tag == "Player"){
+                PlayerMovement.bTime = 10;
+                MyMovement.moveSpeed = new_speed;
+                upgrade.Play();
+                hasRamen = true;
+              }   
+        }
     }
     
 }

@@ -10,7 +10,7 @@ public class Door : MonoBehaviour{
     public bool open = false;
 	public bool closeToDoor = false;
 	public string nextScene;
-
+    public AudioSource doorOpen;
 	public bool isIntroSceneDoor = false;
 
     // Start is called before the first frame update
@@ -41,8 +41,8 @@ public class Door : MonoBehaviour{
 		if (other.gameObject.tag == "Player"){
 			closeToDoor = true;	
 		}
-		
         if(open){
+            doorOpen.Play();
             if (this.gameObject.tag == "Finish"){
                 if (GameHandler.scoreValue >= 5){
                     SceneManager.LoadScene("WinA");

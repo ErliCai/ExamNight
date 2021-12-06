@@ -6,6 +6,8 @@ public class CollectNote : MonoBehaviour
 {
     // Start is called before the first frame update
     private Note thisNote;
+    public AudioSource noteNoise;
+
     
     private void Awake(){
       thisNote = GetComponent<Note>();
@@ -13,6 +15,7 @@ public class CollectNote : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision){
       if (collision.gameObject.tag.Equals("player")){
+        noteNoise.Play();
         Destroy(gameObject);
       }
     }
