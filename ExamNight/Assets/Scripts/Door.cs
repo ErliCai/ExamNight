@@ -42,7 +42,7 @@ public class Door : MonoBehaviour{
 			closeToDoor = true;	
 		}
         if(open){
-            doorOpen.Play();
+            // doorOpen.Play();
             if (this.gameObject.tag == "Finish"){
                 if (GameHandler.scoreValue >= 5){
                     SceneManager.LoadScene("WinA");

@@ -31,15 +31,6 @@ public class Collide : MonoBehaviour
     }
 
     void Update() {
-        if(Input.GetKey("e")){
-            open = true;
-            StartCoroutine(door());
-        }
-    }
-    
-    IEnumerator door(){
-        yield return new WaitForSeconds(3f);
-        open = false;
     }
     
     //Collect note
