@@ -51,7 +51,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d5392092b62144288bdecd5953deeb14, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -100,6 +100,9 @@ MonoBehaviour:
   movement: {x: 0, y: 0}
   animator: {fileID: 4116095247145443644}
   lastHeight: 0
+  booster: {fileID: 0}
+  bText: {fileID: 0}
+  jSound: {fileID: 0}
 --- !u!212 &5886366002189882278
 SpriteRenderer:
   m_ObjectHideFlags: 0
