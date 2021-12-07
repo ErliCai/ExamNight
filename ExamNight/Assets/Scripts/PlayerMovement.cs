@@ -104,8 +104,8 @@ public class PlayerMovement : MonoBehaviour
   
   IEnumerator Boost()
     {
-		
-		booster.SetActive(false);
+        animator.SetBool("ramen", true);
+        booster.SetActive(false);
         //Print the time of when the function is first called.
         Debug.Log("Boost");
 
@@ -116,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
 		Collide.hasRamen = false;
 		moveSpeed = 5;
 		booster.SetActive(true);
+        animator.SetBool("ramen", false);
     }
 
   // Makes objects with the tag "tree" disappear on contact: 
