@@ -10,11 +10,11 @@ public class Pickups : MonoBehaviour
 {
     // ParticleSystem collectnote;
     public Rigidbody2D rb;
-    public PlayerMovement MyMovement;
+    //public PlayerMovement MyMovement;
     public float new_speed = 10f;
     public bool open = false;
-	public bool hasRamen = false;
-    //public static bool hasRamen = false; //moved to gamehandler
+	//public bool hasRamen = false;
+    public static bool hasRamen = false; //moved to gamehandler
 
 	public string pickUpName;
 	private GameHandler gameHandler;
@@ -22,6 +22,9 @@ public class Pickups : MonoBehaviour
     // Start is called before the first frame update
     
     void Start() {
+		rb = gameObject.GetComponent<Rigidbody2D>();
+		//MyMovement = 
+		
         Physics2D.IgnoreLayerCollision(7, 8);
 		if (GameObject.FindWithTag("GameHandler") != null){
 			gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -45,8 +48,8 @@ public class Pickups : MonoBehaviour
 			}   
         } else if (this.gameObject.tag == "Ramen"){
 			if (other.gameObject.tag == "Player"){
-				MyMovement.moveSpeed = new_speed;
-				// hasRamen = true;   //speak to gamehandler 
+				other.gameObject.GetComponent<PlayerMovement>().moveSpeed = new_speed;
+				hasRamen = true;   //speak to gamehandler 
 				// Destroy(gameObject);			
 			}   
         }

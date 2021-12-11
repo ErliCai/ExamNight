@@ -85,21 +85,21 @@ public class Collide : MonoBehaviour
             }
           }
         }
-            // end check here
-        else if (enemy.gameObject.tag == "Note"){
-              if (other.gameObject.tag == "Player"){
-                GameHandler.scoreValue += 1; 
-    			gameHandler.gotNote(pickUpName);
-                Destroy(enemy);
-              }   
-            } else if (enemy.gameObject.tag == "Ramen"){
-              if (other.gameObject.tag == "Player"){
-                PlayerMovement.bTime = 10;
-                MyMovement.moveSpeed = new_speed;
-                upgrade.Play();
-                hasRamen = true;
-              }   
-        }
+        // end check here
+        // else if (enemy.gameObject.tag == "Note"){
+              // if (other.gameObject.tag == "Player"){
+                // GameHandler.scoreValue += 1; 
+    			// gameHandler.gotNote(pickUpName);
+                // Destroy(enemy);
+              // }   
+            // } else if (enemy.gameObject.tag == "Ramen"){
+              // if (other.gameObject.tag == "Player"){
+                // PlayerMovement.bTime = 10;
+                // MyMovement.moveSpeed = new_speed;
+                // upgrade.Play();
+                // hasRamen = true;
+              // }   
+        // }
     }
     
 }

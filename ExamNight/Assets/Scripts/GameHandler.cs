@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
@@ -27,15 +27,21 @@ public class GameHandler : MonoBehaviour
 	public static bool classNote1 = true;
 	public static bool classNote2 = true;
 
-
+	//Door return location management for the IntroScene
 	public static Vector2 playerLastPos;
-
+	public Vector2 setInitialPosition;
+	public static bool firstTimeInIntroLevel = true; 
 
     // Start is called before the first frame update
     void Start()
     {
         score = GetComponent<Text>();
-		playerLastPos = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
+		
+		if (firstTimeInIntroLevel == true){
+			playerLastPos = setInitialPosition;
+			firstTimeInIntroLevel = false;
+		}
+		
     }
 
     // Update is called once per frame

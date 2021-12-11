@@ -59,8 +59,10 @@ public class Door : MonoBehaviour{
                 }
             }
             
+			//put the player back on the platform where they entered the room 
 			if (isIntroSceneDoor==true){
 				GameHandler.playerLastPos = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
+				Debug.Log("playerLastPos = " + GameHandler.playerLastPos);
 			} else {}
             
 			SceneManager.LoadScene(nextScene); 

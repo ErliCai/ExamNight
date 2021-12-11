@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 	public Rigidbody2D rb;
 	//public GameObject player;
 	public float moveSpeed = 5f;
-	public Vector2 movement;
+	private Vector2 movement;
 	private float lastJump = 0f;
 	public Animator animator;
 	bool canJump = false;
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 	//private float contactPoint = 0f;
 	public GameObject booster;
 	public GameObject bText;
-	public static float bTime = 10;
+	public static int bTime = 10;
 	private float bTimer = 0f;
 	public AudioSource jSound;
 
@@ -88,12 +88,16 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-		if(Collide.hasRamen){
+		if(Pickups.hasRamen){
 			StartCoroutine(Boost());
 			bTimer += 0.02f;
 	        if (bTimer >= 1f){
-	                    bTime -= 1f;
-	                    bTimer = 0;
+				bTime -= 1;
+				bTimer = 0;
+				if (bTime <=0){
+					bTime=10;
+					Pickups.hasRamen=false;
+				}
 	        }
 			Text timeTextC = bText.GetComponent<Text>();
 	        timeTextC.text = "RAMEN TIME: " + bTime; 
