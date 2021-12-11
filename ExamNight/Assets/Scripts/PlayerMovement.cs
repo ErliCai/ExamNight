@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {	
 	public Rigidbody2D rb;
-	public GameObject player;
+	//public GameObject player;
 	public float moveSpeed = 5f;
 	public Vector2 movement;
 	private float lastJump = 0f;
 	public Animator animator;
 	bool canJump = false;
-	public float lastHeight = 0f;
-	private float contactPoint = 0f;
+	//public float lastHeight = 0f;
+	//private float contactPoint = 0f;
 	public GameObject booster;
 	public GameObject bText;
 	public static float bTime = 10;
@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     // Auto-load the RigidBody component into the variable: 
     void Start(){
         rb = GetComponent<Rigidbody2D> ();
+		animator = GetComponentInChildren<Animator> ();
         //isFacingLeft = false;
         //isFacingRight = true;
         //isJumping = false;
@@ -122,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
   // Makes objects with the tag "tree" disappear on contact: 
   void OnCollisionEnter2D(Collision2D other){
       if (other.gameObject.tag != "Note"){
-      canJump = true;
+		canJump = true;
       }
   }
 } 
