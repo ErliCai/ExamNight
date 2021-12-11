@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 public class Pickups : MonoBehaviour
 {
+    // ParticleSystem collectnote;
     public Rigidbody2D rb;
     public PlayerMovement MyMovement;
     public float new_speed = 10f;
@@ -19,9 +20,9 @@ public class Pickups : MonoBehaviour
 	private GameHandler gameHandler;
 
     // Start is called before the first frame update
+    
     void Start() {
         Physics2D.IgnoreLayerCollision(7, 8);
-		
 		if (GameObject.FindWithTag("GameHandler") != null){
 			gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
 		}
@@ -29,32 +30,24 @@ public class Pickups : MonoBehaviour
 
     void Update() {
 
-        if(hasRamen){
-            StartCoroutine(Ramen());
-            //TODO
-            //SET PLAYER SPEED BACK HERE
-            //Add timer
-        }
     }
-    
-    IEnumerator Ramen(){
-        yield return new WaitForSeconds(3f);
-	}
-    
+
     //Collect note
+    
     void OnTriggerEnter2D(Collider2D other){
         if (this.gameObject.tag == "Note"){
 			if (other.gameObject.tag == "Player"){
 				GameHandler.scoreValue += 1; 
 				gameHandler.gotNote(pickUpName);
 				Destroy(gameObject);
+                // ParticleSystem.Play();
+                
 			}   
         } else if (this.gameObject.tag == "Ramen"){
 			if (other.gameObject.tag == "Player"){
 				MyMovement.moveSpeed = new_speed;
-				//GameHandler.hasRamen = true;   //speak to gamehandler 
-				StartCoroutine(Ramen()); 
-				Destroy(gameObject);			
+				// hasRamen = true;   //speak to gamehandler 
+				// Destroy(gameObject);			
 			}   
         }
     }
