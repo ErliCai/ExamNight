@@ -35,6 +35,7 @@ public class Pickups : MonoBehaviour
 
     }
 
+
     //Collect note
     
     void OnTriggerEnter2D(Collider2D other){
@@ -50,7 +51,6 @@ public class Pickups : MonoBehaviour
 			if (other.gameObject.tag == "Player"){
 				other.gameObject.GetComponent<PlayerMovement>().moveSpeed = new_speed;
 				hasRamen = true;   //speak to gamehandler 
-				// Destroy(gameObject);			
 			}   
         }
     }

@@ -1490,6 +1490,7 @@ MonoBehaviour:
   followTransform: {fileID: 1937886607}
   timeText: {fileID: 1638110300}
   TutorialLevel: 0
+  doorText: {fileID: 806947112}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2098,6 +2099,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3041164337044861361, guid: ce2a71be03a05497fb5eacf970fabc82, type: 3}
   m_PrefabInstance: {fileID: 550774577}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &806947112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7414070094338483305, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+  m_PrefabInstance: {fileID: 140202758}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887644480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2369,6 +2375,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6898989773291656785, guid: ce2a71be03a05497fb5eacf970fabc82, type: 3}
+      propertyPath: doorText
+      value: 
+      objectReference: {fileID: 806947112}
     - target: {fileID: 6898989773291656785, guid: ce2a71be03a05497fb5eacf970fabc82, type: 3}
       propertyPath: nextScene
       value: Library

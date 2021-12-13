@@ -94,9 +94,12 @@ public class PlayerMovement : MonoBehaviour
 	        if (bTimer >= 1f){
 				bTime -= 1;
 				bTimer = 0;
+				moveSpeed = 10;
 				if (bTime <=0){
 					bTime=10;
-					Pickups.hasRamen=false;
+					booster.SetActive(true);
+					Pickups.hasRamen = false;
+					moveSpeed = 5;
 				}
 	        }
 			Text timeTextC = bText.GetComponent<Text>();
@@ -118,9 +121,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(10);
 
         //After we have waited 5 seconds print the time again.
-		Collide.hasRamen = false;
-		moveSpeed = 5;
-		booster.SetActive(true);
+		// Collide.hasRamen = false;
         animator.SetBool("ramen", false);
     }
 

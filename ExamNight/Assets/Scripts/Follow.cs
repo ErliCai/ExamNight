@@ -12,6 +12,7 @@ public class Follow : MonoBehaviour
     private float gameTimer = 0f;
     public GameObject timeText;
     public bool TutorialLevel;
+    public GameObject doorText;
     
     void Start(){
         UpdateTime();
@@ -30,6 +31,13 @@ public class Follow : MonoBehaviour
         if (gameTime <= 0){
                     gameTime = 0;
                     SceneManager.LoadScene("ExamMiss");                                                   // restart same level
+        }
+        if(!Door.closeToDoor){
+            Text sampleText = doorText.GetComponent<Text>();
+            sampleText.text = " "; 	
+        } else {
+            Text sampleText = doorText.GetComponent<Text>();
+            sampleText.text = "Press \"e\" to enter "; 	
         }
     }
     

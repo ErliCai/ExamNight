@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 
 public class Door : MonoBehaviour{
     
 	public Animator anim; 
     public bool open = false;
-	public bool closeToDoor = false;
+	public static bool closeToDoor = false;
 	public string nextScene;
     public AudioSource doorOpen;
 	public bool isIntroSceneDoor = false;
@@ -26,7 +28,7 @@ public class Door : MonoBehaviour{
 				anim.SetBool("open", true);
 				StartCoroutine(door());
 			}
-		}			
+        }			
 	}
 
 	IEnumerator door(){
@@ -39,7 +41,7 @@ public class Door : MonoBehaviour{
     void OnTriggerStay2D(Collider2D other){
         //if the player gets to the door
 		if (other.gameObject.tag == "Player"){
-			closeToDoor = true;	
+			closeToDoor = true;
 		}
         if(open){
             // doorOpen.Play();
