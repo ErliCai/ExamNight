@@ -2860,6 +2860,7 @@ MonoBehaviour:
   followTransform: {fileID: 1164426816}
   timeText: {fileID: 1758161393}
   TutorialLevel: 0
+  doorText: {fileID: 5011204300456168994}
 --- !u!1 &1016017254
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,5 +6795,10 @@ PrefabInstance:
 --- !u!1 &5011204300456168993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7657547021398408712, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+  m_PrefabInstance: {fileID: 5011204300456168992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5011204300456168994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7414070094338483305, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
   m_PrefabInstance: {fileID: 5011204300456168992}
   m_PrefabAsset: {fileID: 0}

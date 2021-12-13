@@ -1087,6 +1087,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1780875991069701353, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1780875991069701353, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164407269760860345, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164407269760860345, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164407269760860345, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5011204300701857025, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1185,6 +1205,11 @@ GameObject:
 --- !u!1 &1079806177 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5011204300048885713, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+  m_PrefabInstance: {fileID: 1079806175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1079806178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7414070094338483305, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
   m_PrefabInstance: {fileID: 1079806175}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1093097469
@@ -6437,6 +6462,7 @@ MonoBehaviour:
   followTransform: {fileID: 674302318}
   timeText: {fileID: 1079806177}
   TutorialLevel: 0
+  doorText: {fileID: 1079806178}
 --- !u!1 &1956769890
 GameObject:
   m_ObjectHideFlags: 0

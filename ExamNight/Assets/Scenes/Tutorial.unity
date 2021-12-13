@@ -665,6 +665,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5886366002189882277, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
   m_PrefabInstance: {fileID: 1900162167}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &46733670 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7630719131851692980, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+  m_PrefabInstance: {fileID: 1900162167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!58 &46733673
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5888,6 +5893,7 @@ MonoBehaviour:
   followTransform: {fileID: 493666055}
   timeText: {fileID: 1729537418}
   TutorialLevel: 1
+  doorText: {fileID: 1550291682}
 --- !u!1001 &1077477809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8600,6 +8606,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 4116095247145443644, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
   m_PrefabInstance: {fileID: 1900162167}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1550291682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7414070094338483305, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+  m_PrefabInstance: {fileID: 1530057132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1551434112
 GameObject:
   m_ObjectHideFlags: 0
@@ -10430,7 +10441,7 @@ PrefabInstance:
     - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: jSound
       value: 
-      objectReference: {fileID: 948981990}
+      objectReference: {fileID: 46733670}
     - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: booster
       value: 
