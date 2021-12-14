@@ -4215,7 +4215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228879675}
   m_LocalRotation: {x: -0, y: -0, z: 0.0066940365, w: -0.9999776}
-  m_LocalPosition: {x: 1.2, y: 0.9, z: 0}
+  m_LocalPosition: {x: -1.7, y: 1.08, z: 0}
   m_LocalScale: {x: 0.48523843, y: 0.77243155, z: 1}
   m_Children: []
   m_Father: {fileID: 2062591153}
@@ -4278,34 +4278,24 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228879675}
   m_Enabled: 1
-  m_Tiles:
-  - first: {x: 5, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+  m_Tiles: {}
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 4f82212daabec4e76ac3f5676ab4968b, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 5124922423122105795, guid: 27a39763c84eb4683b4c9ff147765d82, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 1
+  - m_RefCount: 0
     m_Data:
       e00: 1
       e01: 0
@@ -4324,7 +4314,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1
+  - m_RefCount: 0
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4385,24 +4375,9 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths:
   - m_Collider: {fileID: 1228879679}
-    m_ColliderPaths:
-    - - X: 29114304
-        Y: -46345892
-      - X: 25171742
-        Y: -46345892
-      - X: 24262020
-        Y: -49242190
-      - X: 24262020
-        Y: -54070204
-      - X: 29114304
-        Y: -54070204
+    m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: 2.9114013, y: -5.4070206}
-      - {x: 2.9114013, y: -4.634589}
-      - {x: 2.517168, y: -4.6346087}
-      - {x: 2.426202, y: -4.9242234}
-      - {x: 2.4262311, y: -5.4070206}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1228879681
