@@ -1009,7 +1009,7 @@ PrefabInstance:
     - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: jSound
       value: 
-      objectReference: {fileID: 1161967913}
+      objectReference: {fileID: 674302317}
     - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: booster
       value: 
@@ -1064,6 +1064,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+--- !u!82 &674302317 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8795327832014216920, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+  m_PrefabInstance: {fileID: 674302316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &674302318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5886366002189882275, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
