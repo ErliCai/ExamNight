@@ -14,7 +14,6 @@ public class Collide : MonoBehaviour
     public float new_speed = 10f;
     public bool open = false;
     public static bool hasRamen = false;
-    public AudioSource upgrade;
 
 
 

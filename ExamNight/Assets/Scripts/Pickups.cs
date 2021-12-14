@@ -18,6 +18,8 @@ public class Pickups : MonoBehaviour
 
 	public string pickUpName;
 	private GameHandler gameHandler;
+    public AudioSource upgrade;
+
 
     // Start is called before the first frame update
     
@@ -49,6 +51,7 @@ public class Pickups : MonoBehaviour
 			}   
         } else if (this.gameObject.tag == "Ramen"){
 			if (other.gameObject.tag == "Player"){
+                upgrade.Play();
 				other.gameObject.GetComponent<PlayerMovement>().moveSpeed = new_speed;
 				hasRamen = true;   //speak to gamehandler 
 			}   
