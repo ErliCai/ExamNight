@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5886366002189882274}
   - component: {fileID: 5886366002189882273}
   - component: {fileID: 5886366002189882272}
-  - component: {fileID: 7630719131851692980}
+  - component: {fileID: 8795327832014216920}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -96,12 +96,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   moveSpeed: 5
-  movement: {x: 0, y: 0}
   animator: {fileID: 4116095247145443644}
   booster: {fileID: 0}
   bText: {fileID: 0}
-  jSound: {fileID: 7630719131851692980}
---- !u!82 &7630719131851692980
+  jSound: {fileID: 8795327832014216920}
+--- !u!82 &8795327832014216920
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,8 +110,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e8eaeb7bf83e1486194ca288ad59fb3a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 3dfb4a57e66374a91b6ba5e108addeef, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
