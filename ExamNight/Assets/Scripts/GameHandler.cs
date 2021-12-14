@@ -47,7 +47,12 @@ public class GameHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "NOTES: " + scoreValue;
+        string SceneName = SceneManager.GetActiveScene().name;
+        if (SceneName == "Tutorial"){
+            score.text = "NOTES: " + scoreValue + "/45";
+        } else {
+            score.text = "NOTES: " + scoreValue + "/10";
+        }
     }
 	
 	public bool checkNote(string notename){

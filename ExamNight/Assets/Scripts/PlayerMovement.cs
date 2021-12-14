@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 	//private float contactPoint = 0f;
 	public GameObject booster;
 	public GameObject bText;
-	public static int bTime = 10;
+	public static int bTime = 20;
 	private float bTimer = 0f;
 	public AudioSource jSound;
 
@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 				bTimer = 0;
 				moveSpeed = 10;
 				if (bTime <=0){
-					bTime=10;
+					bTime=20;
 					booster.SetActive(true);
 					Pickups.hasRamen = false;
 					moveSpeed = 5;
@@ -118,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Boost");
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(20);
 
         //After we have waited 5 seconds print the time again.
 		// Collide.hasRamen = false;

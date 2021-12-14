@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Follow : MonoBehaviour
 {
     public Transform followTransform;
-    public static float gameTime = 200;
+    public static float gameTime = 300;
     private float gameTimer = 0f;
     public GameObject timeText;
     public bool TutorialLevel;

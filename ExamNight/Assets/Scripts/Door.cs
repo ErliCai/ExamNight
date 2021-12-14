@@ -14,6 +14,8 @@ public class Door : MonoBehaviour{
 	public string nextScene;
     public AudioSource doorOpen;
 	public bool isIntroSceneDoor = false;
+    public static bool leaveTut = false;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -24,6 +26,10 @@ public class Door : MonoBehaviour{
     void Update() {
 		if (closeToDoor==true){
 			if(Input.GetKey("e")){
+                string SceneName = SceneManager.GetActiveScene().name;
+                if (SceneName == "Tutorial"){
+                    GameHandler.firstTimeInIntroLevel = true; 
+                }
 				open = true;
 				anim.SetBool("open", true);
 				StartCoroutine(door());
