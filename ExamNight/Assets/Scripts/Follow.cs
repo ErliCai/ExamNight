@@ -32,13 +32,13 @@ public class Follow : MonoBehaviour
                     gameTime = 0;
                     SceneManager.LoadScene("ExamMiss");                                                   // restart same level
         }
-        if(!Door.closeToDoor){
-            Text sampleText = doorText.GetComponent<Text>();
-            sampleText.text = " "; 	
-        } else {
-            Text sampleText = doorText.GetComponent<Text>();
-            sampleText.text = "Press \"e\" to enter "; 	
-        }
+        // if(!Door.closeToDoor){
+        //     Text sampleText = doorText.GetComponent<Text>();
+        //     sampleText.text = " "; 	
+        // } else {
+        //     Text sampleText = doorText.GetComponent<Text>();
+        //     sampleText.text = "Press \"e\" to enter "; 	
+        // }
     }
     
     public void UpdateTime(){

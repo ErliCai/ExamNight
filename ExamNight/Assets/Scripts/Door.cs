@@ -8,9 +8,10 @@ using UnityEngine.UI;
 
 public class Door : MonoBehaviour{
     
+    public GameObject pressE;
 	public Animator anim; 
     public bool open = false;
-	public static bool closeToDoor = false;
+	public bool closeToDoor = false;
 	public string nextScene;
     public AudioSource doorOpen;
 	public bool isIntroSceneDoor = false;
@@ -21,10 +22,12 @@ public class Door : MonoBehaviour{
     void Start() {
 		anim = GetComponentInChildren<Animator>();
 		anim.SetBool("open", false);
+        pressE.SetActive(false);
     }
 
     void Update() {
 		if (closeToDoor==true){
+            pressE.SetActive(true);
 			if(Input.GetKey("e")){
                 string SceneName = SceneManager.GetActiveScene().name;
                 if (SceneName == "Tutorial"){
@@ -34,6 +37,8 @@ public class Door : MonoBehaviour{
 				anim.SetBool("open", true);
 				StartCoroutine(door());
 			}
+        } else {
+            pressE.SetActive(false);
         }			
 	}
 
