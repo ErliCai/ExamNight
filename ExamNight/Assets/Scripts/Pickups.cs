@@ -20,9 +20,10 @@ public class Pickups : MonoBehaviour
 	private GameHandler gameHandler;
     public AudioSource upgrade;
 
-
+    public GameObject particlesPrefab;
+    public GameObject particleSpawn;
     // Start is called before the first frame update
-    
+
     void Start() {
 		rb = gameObject.GetComponent<Rigidbody2D>();
 		//MyMovement = 
@@ -47,8 +48,8 @@ public class Pickups : MonoBehaviour
 				gameHandler.gotNote(pickUpName);
 				Destroy(gameObject);
                 // ParticleSystem.Play();
-                
-			}   
+                GameObject ps = Instantiate(particlesPrefab, particleSpawn.transform.position, Quaternion.identity);
+            }   
         } else if (this.gameObject.tag == "Ramen"){
 			if (other.gameObject.tag == "Player"){
                 upgrade.Play();
