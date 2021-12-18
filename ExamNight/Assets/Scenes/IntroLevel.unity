@@ -902,6 +902,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5011204300377788980, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -14.79303
+      objectReference: {fileID: 0}
     - target: {fileID: 5011204300701857025, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -997,6 +1001,10 @@ PrefabInstance:
     - target: {fileID: 5011204301321543332, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011204301321543333, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 5011204301321543334, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
       propertyPath: setInitialPosition.x
@@ -8634,6 +8642,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6788464191390862634, guid: 9012b308b5abf41db9721d6fcc387067, type: 3}
+      propertyPath: m_SortingOrder
+      value: 95
+      objectReference: {fileID: 0}
     - target: {fileID: 6788464192141016664, guid: 9012b308b5abf41db9721d6fcc387067, type: 3}
       propertyPath: m_Name
       value: NewFriend

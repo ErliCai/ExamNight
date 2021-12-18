@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 90
   m_Sprite: {fileID: 21300000, guid: 280ed693d90a544b491f89253108759e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -157,8 +157,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7946664890363542727}
-  gameTime: 20
-  timeText: {fileID: 0}
+  rb: {fileID: 0}
+  MyMovement: {fileID: 0}
+  new_speed: 10
+  open: 0
+  pickUpName: 
 --- !u!50 &7946664890363542725
 Rigidbody2D:
   serializedVersion: 4
