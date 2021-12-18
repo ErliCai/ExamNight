@@ -113,11 +113,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  MyMovement: {fileID: 0}
   new_speed: 10
   open: 0
-  hasRamen: 0
   pickUpName: 
+  upgrade: {fileID: 0}
+  particlesPrefab: {fileID: 93463744372347256, guid: 734c49e5c684c4bafbb505ee1881bab3, type: 3}
+  particleSpawn: {fileID: 0}
 --- !u!1 &7769069379752116856
 GameObject:
   m_ObjectHideFlags: 0

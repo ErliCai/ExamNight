@@ -732,6 +732,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 8701904117055919310}
   isPaused: 0
   mixer: {fileID: 24100000, guid: 4e456d462ce21014fa6af0cc4fbf5be9, type: 2}
+  cameraFollowScript: {fileID: 0}
 --- !u!1 &5011204301321543332
 GameObject:
   m_ObjectHideFlags: 0

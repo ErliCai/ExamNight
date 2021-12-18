@@ -21,7 +21,7 @@ public class Pickups : MonoBehaviour
     public AudioSource upgrade;
 
     public GameObject particlesPrefab;
-    public GameObject particleSpawn;
+    public Transform particleSpawn;
     // Start is called before the first frame update
 
     void Start() {
@@ -32,6 +32,9 @@ public class Pickups : MonoBehaviour
 		if (GameObject.FindWithTag("GameHandler") != null){
 			gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
 		}
+		
+		particleSpawn = gameObject.transform;
+		
     }
 
     void Update() {
@@ -48,7 +51,7 @@ public class Pickups : MonoBehaviour
 				gameHandler.gotNote(pickUpName);
 				Destroy(gameObject);
                 // ParticleSystem.Play();
-                GameObject ps = Instantiate(particlesPrefab, particleSpawn.transform.position, Quaternion.identity);
+                GameObject ps = Instantiate(particlesPrefab, particleSpawn.position, Quaternion.identity);
             }   
         } else if (this.gameObject.tag == "Ramen"){
 			if (other.gameObject.tag == "Player"){

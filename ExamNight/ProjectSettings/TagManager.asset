@@ -17,6 +17,7 @@ TagManager:
   - Undefined
   - GameHandler
   - PauseMenuSlider
+  - EndCamPos
   layers:
   - Default
   - TransparentFX

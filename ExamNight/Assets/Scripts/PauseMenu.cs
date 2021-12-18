@@ -14,6 +14,8 @@ public class PauseMenu : MonoBehaviour
 	public AudioMixer mixer;
 	public static float volumeLevel = 1.0f;
 	private Slider sliderVolumeCtrl;
+	
+	public Follow cameraFollowScript;
 
 	void Awake (){
 		SetLevel (volumeLevel);
@@ -25,6 +27,11 @@ public class PauseMenu : MonoBehaviour
 	}
 
 	void Start (){
+		
+		if (GameObject.FindWithTag("MainCamera") != null){
+			cameraFollowScript = GameObject.FindWithTag("MainCamera").GetComponent<Follow>();
+		}
+		
 		pauseMenuUI.SetActive(false);
 	}	
 	
@@ -61,16 +68,19 @@ public class PauseMenu : MonoBehaviour
 	public void StartTutorial(){
 		Time.timeScale = 1f;
 		SceneManager.LoadScene("Tutorial");
+		cameraFollowScript.resetClock();
 	}
 
 	public void StartGame(){
 		Time.timeScale = 1f;
 		SceneManager.LoadScene("IntroLevel");
+		cameraFollowScript.resetClock();
 	}
 
 	public void RestartGame(){
 		Time.timeScale = 1f;
 		SceneManager.LoadScene("Start");
+		cameraFollowScript.resetClock();
 	}
 
 	public void QuitGame(){
