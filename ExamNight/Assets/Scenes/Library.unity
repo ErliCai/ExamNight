@@ -3066,6 +3066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followPos: {fileID: 0}
   startGameTime: 300
+  gameTimeInspectorDisplay: 0
   timeText: {fileID: 1758161393}
   TutorialLevel: 0
 --- !u!1 &1016017254
@@ -3283,9 +3284,9 @@ GameObject:
   - component: {fileID: 1063866553}
   - component: {fileID: 1063866555}
   - component: {fileID: 1063866554}
+  - component: {fileID: 1063866556}
   - component: {fileID: 1063866558}
   - component: {fileID: 1063866557}
-  - component: {fileID: 1063866556}
   m_Layer: 0
   m_Name: collision1
   m_TagString: Untagged
@@ -3545,7 +3546,7 @@ CompositeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063866552}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

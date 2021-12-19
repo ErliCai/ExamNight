@@ -10,6 +10,7 @@ public class Follow : MonoBehaviour
     public Transform followPos;
     public static float gameTime = 300;
 	public float startGameTime = 300;
+	public float gameTimeInspectorDisplay;
     private float gameTimer = 0f;
     public GameObject timeText;
     public bool TutorialLevel;
@@ -43,6 +44,7 @@ public class Follow : MonoBehaviour
 			}
 			if (gameTime <= 0){
                     gameTime = 0;
+					Debug.Log("Follow.cs: Time Ran Out");
                     SceneManager.LoadScene("ExamMiss");                                                   // restart same level
 			}
 			// if(!Door.closeToDoor){

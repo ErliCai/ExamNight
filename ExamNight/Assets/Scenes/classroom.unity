@@ -1461,9 +1461,9 @@ GameObject:
   - component: {fileID: 647269808}
   - component: {fileID: 647269810}
   - component: {fileID: 647269809}
+  - component: {fileID: 647269811}
   - component: {fileID: 647269813}
   - component: {fileID: 647269812}
-  - component: {fileID: 647269811}
   m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
@@ -3087,7 +3087,7 @@ CompositeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647269807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3994,10 +3994,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d3c39e89ccb428fa683464c235af80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTransform: {fileID: 1436155954}
+  followPos: {fileID: 0}
+  startGameTime: 300
+  gameTimeInspectorDisplay: 0
   timeText: {fileID: 1359082671}
   TutorialLevel: 0
-  doorText: {fileID: 1318518462}
 --- !u!1001 &1318518461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4115,11 +4116,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
---- !u!1 &1318518462 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7414070094338483305, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
-  m_PrefabInstance: {fileID: 1318518461}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331709574
 GameObject:
   m_ObjectHideFlags: 0
@@ -4791,11 +4787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60815fb7c6ae54a7189e399746bb117f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1436155954 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5886366002189882275, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
-  m_PrefabInstance: {fileID: 749044162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1780996377
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 	private Vector2 movement;
 	private float lastJump = 0f;
 	public Animator animator;
-	bool canJump = false;
+	bool canJump = true;
 	//public float lastHeight = 0f;
 	//private float contactPoint = 0f;
 	public GameObject booster;
@@ -85,14 +85,14 @@ public class PlayerMovement : MonoBehaviour
       
         if (Input.GetButtonDown("Jump")){
             if (canJump) {
-			jSound.Play();
-              rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
-              lastJump = Time.time;
-              canJump = false;
-              animator.SetTrigger("Jump");
+				jSound.Play();
+				rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+				//lastJump = Time.time;
+				canJump = false;
+				animator.SetTrigger("Jump");
             }
-
         }
+		
 		if(hasRamen){
 			StartCoroutine(Boost());
 			bTimer += 0.02f;

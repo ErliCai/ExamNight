@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class clickmenu : MonoBehaviour
 {
-	public Follow cameraFollowScript;
-	
+	public Follow cameraFollowScript;	
 	public Color startColor;
 	
     // Start is called before the first frame update
@@ -33,8 +32,9 @@ public class clickmenu : MonoBehaviour
     }
     
     void OnMouseDown(){
-      cameraFollowScript.resetClock();
-      SceneManager.LoadScene("Start");
+		GameHandler.scoreValue = 0;
+		cameraFollowScript.resetClock();
+		SceneManager.LoadScene("Start");
     }    
     
 }
