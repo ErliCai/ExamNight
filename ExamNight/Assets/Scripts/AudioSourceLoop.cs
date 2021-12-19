@@ -5,30 +5,17 @@ using UnityEngine.UI;
 
 public class AudioSourceLoop : MonoBehaviour
 {
-    AudioSource m_AudioSource;
-
-    public Toggle m_Toggle;
-    public Button m_Button;
+    public AudioSource happySound;
+    public AudioSource tenseSound;
 
     void Start()
     {
-        //Fetch the AudioSource component of the GameObject (make sure there is one in the Inspector)
-        m_AudioSource = GetComponent<AudioSource>();
-        //Stop the Audio playing
-        m_AudioSource.Stop();
-        //Call the PlayButton function when you click this Button
-        m_Button.onClick.AddListener(PlayButton);
+      if (Follow.gameTime > 150){
+        happySound.Play();
+      }
+      else{
+        tenseSound.Play();
+      }
     }
 
-    void Update()
-    {
-        //Turn the loop on and off depending on the Toggle status
-        m_AudioSource.loop = m_Toggle.isOn;
-    }
-
-    //This plays the Audio clip when you press the Button
-    void PlayButton()
-    {
-        m_AudioSource.Play();
-    }
 }

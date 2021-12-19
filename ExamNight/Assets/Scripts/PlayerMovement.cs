@@ -82,14 +82,17 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("lastLeft", true);
         }
+				if (Time.time - lastJump > 4){
+					  canJump = true;
+				}
       
         if (Input.GetButtonDown("Jump")){
             if (canJump) {
-				jSound.Play();
-				rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
-				//lastJump = Time.time;
-				canJump = false;
-				animator.SetTrigger("Jump");
+								jSound.Play();
+								rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+								lastJump = Time.time;
+								canJump = false;
+								animator.SetTrigger("Jump");
             }
         }
 		
@@ -133,10 +136,9 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("ramen", false);
     }
 
-  // Makes objects with the tag "tree" disappear on contact: 
   void OnCollisionEnter2D(Collision2D other){
       if (other.gameObject.tag != "Note"){
-		canJump = true;
+		      canJump = true;
       }
   }
 } 
