@@ -15,7 +15,7 @@ public class Follow : MonoBehaviour
     public GameObject timeText;
     public bool TutorialLevel;
     //public GameObject doorText;
-    
+	
     void Start(){
         UpdateTime();
         // if (TutorialLevel) {gameTime += 50000000;}
@@ -23,7 +23,6 @@ public class Follow : MonoBehaviour
 		
 		if (GameObject.FindWithTag("Player") != null){
 			followPos = GameObject.FindWithTag("Player").GetComponent<Transform>();
-			 
 		} else {
 			followPos = GameObject.FindWithTag("EndCamPos").GetComponent<Transform>();
 			Debug.Log("No player in scene");

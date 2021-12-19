@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour
 {
     public static int scoreValue = 0;
-    
     Text score;
 
 	//Room Notes Bools
@@ -39,6 +38,7 @@ public class GameHandler : MonoBehaviour
 			if (firstTimeInIntroLevel == true){
 				playerLastPos = setInitialPosition;
 				scoreValue = 0;
+				Follow.gameTime = 300;
 				firstTimeInIntroLevel = false;
 			}
         }

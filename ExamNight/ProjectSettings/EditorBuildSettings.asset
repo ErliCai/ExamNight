@@ -14,14 +14,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DormRoom.unity
     guid: 3dceffb631e3045099102e456b3339ba
-  - enabled: 1
-    path: Assets/Scenes/Room2.unity
-    guid: 2ab13f2e2e6d64107a729c2baa07d87a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/WinF.unity
     guid: c01a1e103042e47a4ab7fd666bdf84e8
   - enabled: 1
-    path: Assets/Scenes/Lockers.unity
+    path: Assets/Scenes/lockers.unity
     guid: b63431c7cda4446cfab52dd8eb6e1575
   - enabled: 1
     path: Assets/Scenes/WinA.unity
@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: c49a2c04aa73d4c738379b601df589b7
   - enabled: 1
-    path: Assets/Scenes/ClassRoom.unity
+    path: Assets/Scenes/classroom.unity
     guid: e709421b5368d4e94a78b8f900c9dca8
   - enabled: 1
     path: Assets/Scenes/ExamMiss.unity

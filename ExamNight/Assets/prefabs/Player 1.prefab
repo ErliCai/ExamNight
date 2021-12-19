@@ -202,10 +202,12 @@ MonoBehaviour:
   rb: {fileID: 0}
   moveSpeed: 5
   jumpSpeed: 8
-  ramenBoost: 2
+  startMoveSpeed: 5
+  startJumpSpeed: 8
   animator: {fileID: 4116095247145443644}
   booster: {fileID: 0}
   bText: {fileID: 0}
+  ramenBoostTime: 20
   jSound: {fileID: 8795327832014216920}
 --- !u!114 &2637185838249563365
 MonoBehaviour:
@@ -230,7 +232,7 @@ AudioSource:
   m_GameObject: {fileID: 5886366002189882277}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4e456d462ce21014fa6af0cc4fbf5be9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3dfb4a57e66374a91b6ba5e108addeef, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.25

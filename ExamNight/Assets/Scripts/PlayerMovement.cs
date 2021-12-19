@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 	private Vector2 movement;
 	private float lastJump = 0f;
 	public Animator animator;
-	bool canJump = true;
+	public bool canJump = true;
 	//public float lastHeight = 0f;
 	//private float contactPoint = 0f;
 	public GameObject booster;
@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     //public bool isFacingLeft;
     //[HideInInspector]
     
-
     //private Vector2 facingLeft;
 
     //protected virtual void initialization()
