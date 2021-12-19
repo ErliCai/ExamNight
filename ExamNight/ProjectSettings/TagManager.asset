@@ -18,6 +18,8 @@ TagManager:
   - GameHandler
   - PauseMenuSlider
   - EndCamPos
+  - AngryTeacher
+  - HappyTeacher
   layers:
   - Default
   - TransparentFX

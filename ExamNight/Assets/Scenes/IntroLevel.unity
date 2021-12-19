@@ -882,6 +882,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1330779137709500306, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d7e7abcba0b454a278160150bd0fd96d, type: 3}
     - target: {fileID: 1780875991069701353, guid: 8731b863f78444077818bcf5fd7a42e4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
