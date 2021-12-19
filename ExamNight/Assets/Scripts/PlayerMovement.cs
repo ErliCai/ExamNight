@@ -20,11 +20,12 @@ public class PlayerMovement : MonoBehaviour
 	//private float contactPoint = 0f;
 	public GameObject booster;
 	public GameObject bText;
-	public static int bTime = 20;
+	public static float bTime = 20f;
+	public float ramenBoostTime = 20f;
 	private float bTimer = 0f;
 	public AudioSource jSound;
 
-
+	public static bool hasRamen = false;
 
   
     //[HideInInspector]
@@ -92,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-		if(Pickups.hasRamen){
+		if(hasRamen){
 			StartCoroutine(Boost());
 			bTimer += 0.02f;
 	        if (bTimer >= 1f){
@@ -101,9 +102,9 @@ public class PlayerMovement : MonoBehaviour
 				moveSpeed = 10;
 				jumpSpeed = 10;
 				if (bTime <=0){
-					bTime=20;
+					bTime=ramenBoostTime;
 					booster.SetActive(true);
-					Pickups.hasRamen = false;
+					hasRamen = false;
 					moveSpeed = startMoveSpeed;
 					jumpSpeed = startJumpSpeed;
 				}
@@ -113,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 		} else {
 			Text timeTextC = bText.GetComponent<Text>();
 			timeTextC.text = " "; 
+			bTime = ramenBoostTime;
 		}
   } 
   
@@ -124,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Boost");
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(ramenBoostTime);
 
         //After we have waited 5 seconds print the time again.
 		// Collide.hasRamen = false;

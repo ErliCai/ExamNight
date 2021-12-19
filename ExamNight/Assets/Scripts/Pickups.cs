@@ -14,7 +14,7 @@ public class Pickups : MonoBehaviour
     public float new_speed = 10f;
     public bool open = false;
 	//public bool hasRamen = false;
-    public static bool hasRamen = false; //moved to gamehandler
+    //public static bool hasRamen = false; //moved to gamehandler
 
 	public string pickUpName;
 	private GameHandler gameHandler;
@@ -56,8 +56,9 @@ public class Pickups : MonoBehaviour
         } else if (this.gameObject.tag == "Ramen"){
 			if (other.gameObject.tag == "Player"){
                 upgrade.Play();
-				other.gameObject.GetComponent<PlayerMovement>().moveSpeed = new_speed;
-				hasRamen = true;   //speak to gamehandler 
+				PlayerMovement.hasRamen = true;
+				//other.gameObject.GetComponent<PlayerMovement>().moveSpeed = new_speed;
+				//hasRamen = true;   //speak to gamehandler 
 			}   
         }
     }
