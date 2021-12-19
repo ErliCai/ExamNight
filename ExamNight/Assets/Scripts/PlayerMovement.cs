@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 	public Rigidbody2D rb;
 	//public GameObject player;
 	public float moveSpeed = 5f;
+	public float jumpSpeed = 8f;
+	public float startMoveSpeed = 5f;
+	public float startJumpSpeed = 8f;
 	private Vector2 movement;
 	private float lastJump = 0f;
 	public Animator animator;
@@ -60,7 +63,8 @@ public class PlayerMovement : MonoBehaviour
 		if (thisLevel == "IntroLevel"){
 			gameObject.transform.position = GameHandler.playerLastPos;
 		}
-		
+		moveSpeed = startMoveSpeed;
+		jumpSpeed = startJumpSpeed;
     }
 
   // Listen for player input to move the object: 
@@ -81,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump")){
             if (canJump) {
 			jSound.Play();
-              rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
+              rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
               lastJump = Time.time;
               canJump = false;
               animator.SetTrigger("Jump");
@@ -95,11 +99,13 @@ public class PlayerMovement : MonoBehaviour
 				bTime -= 1;
 				bTimer = 0;
 				moveSpeed = 10;
+				jumpSpeed = 10;
 				if (bTime <=0){
 					bTime=20;
 					booster.SetActive(true);
 					Pickups.hasRamen = false;
-					moveSpeed = 5;
+					moveSpeed = startMoveSpeed;
+					jumpSpeed = startJumpSpeed;
 				}
 	        }
 			Text timeTextC = bText.GetComponent<Text>();
