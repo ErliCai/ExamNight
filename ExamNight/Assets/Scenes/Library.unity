@@ -309,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: jSound
       value: 
-      objectReference: {fileID: 546750097}
+      objectReference: {fileID: 1927687912}
     - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: booster
       value: 
@@ -7475,6 +7475,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!82 &1927687912 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8795327832014216920, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+  m_PrefabInstance: {fileID: 60546428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1961741955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7769069379316636206, guid: f78a474f92d154bf5850bd8a356f0490, type: 3}

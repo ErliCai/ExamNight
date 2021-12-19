@@ -205,6 +205,7 @@ MonoBehaviour:
   startMoveSpeed: 5
   startJumpSpeed: 8
   animator: {fileID: 4116095247145443644}
+  canJump: 1
   booster: {fileID: 0}
   bText: {fileID: 0}
   ramenBoostTime: 20

@@ -3201,6 +3201,10 @@ PrefabInstance:
       propertyPath: booster
       value: 
       objectReference: {fileID: 377363952}
+    - target: {fileID: 5886366002189882272, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
+      propertyPath: boostSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5886366002189882275, guid: 9a6749f53bdd94dd2aa7955960e6992b, type: 3}
       propertyPath: m_RootOrder
       value: 2

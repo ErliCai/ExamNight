@@ -18,7 +18,6 @@ public class Pickups : MonoBehaviour
 
 	public string pickUpName;
 	private GameHandler gameHandler;
-    public AudioSource upgrade;
 
     public GameObject particlesPrefab;
     public Transform particleSpawn;
@@ -55,7 +54,6 @@ public class Pickups : MonoBehaviour
             }   
         } else if (this.gameObject.tag == "Ramen"){
 			if (other.gameObject.tag == "Player"){
-                upgrade.Play();
 				PlayerMovement.hasRamen = true;
 				//other.gameObject.GetComponent<PlayerMovement>().moveSpeed = new_speed;
 				//hasRamen = true;   //speak to gamehandler 
