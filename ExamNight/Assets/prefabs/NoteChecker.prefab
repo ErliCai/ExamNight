@@ -43,3 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fe7ce752286674b9b551b304e0129d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noteOBJs:
+  - {fileID: 0}
+  - {fileID: 0}
+  noteNames:
+  - 
+  - 
