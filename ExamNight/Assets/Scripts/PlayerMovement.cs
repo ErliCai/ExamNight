@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
 		string thisLevel = SceneManager.GetActiveScene().name;
 		if (thisLevel == "IntroLevel"){
 			gameObject.transform.position = GameHandler.playerLastPos;
+			Debug.Log("Player started Intro Scene at: " + GameHandler.playerLastPos);
 		}
 		moveSpeed = startMoveSpeed;
 		jumpSpeed = startJumpSpeed;

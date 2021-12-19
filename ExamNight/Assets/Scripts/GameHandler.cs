@@ -31,26 +31,31 @@ public class GameHandler : MonoBehaviour
 	public static Vector2 playerLastPos;
 	public Vector2 setInitialPosition;
 	public static bool firstTimeInIntroLevel = true; 
+	private string SceneName;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Awake(){
+		SceneName = SceneManager.GetActiveScene().name;
+		if (SceneName == "IntroLevel"){
+			if (firstTimeInIntroLevel == true){
+				playerLastPos = setInitialPosition;
+				scoreValue = 0;
+				firstTimeInIntroLevel = false;
+			}
+        }
+    }
+
+    void Start(){
         score = GetComponent<Text>();
-		
-		if (firstTimeInIntroLevel == true){
-			playerLastPos = setInitialPosition;
-			firstTimeInIntroLevel = false;
-		}
-		
     }
 
     // Update is called once per frame
     void Update()
     {
-        string SceneName = SceneManager.GetActiveScene().name;
         if (SceneName == "Tutorial"){
             score.text = "NOTES: " + scoreValue + "/45";
-        } else {
+        } 
+
+		else {
             score.text = "NOTES: " + scoreValue + "/10";
         }
     }

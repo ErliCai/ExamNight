@@ -78,9 +78,8 @@ public class Door : MonoBehaviour{
 				Debug.Log("playerLastPos = " + GameHandler.playerLastPos);
 			} else {}
             
-			SceneManager.LoadScene(nextScene);
 			PlayerMovement.hasRamen = false;
-        
+			SceneManager.LoadScene(nextScene);
 		}
 		else{Debug.Log("press 'e' to open");}
     }

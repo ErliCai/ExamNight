@@ -6159,6 +6159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followPos: {fileID: 0}
   startGameTime: 300
+  gameTimeInspectorDisplay: 0
   timeText: {fileID: 1729537418}
   TutorialLevel: 1
 --- !u!1001 &1077477809
@@ -10027,7 +10028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1736552443
 SpriteRenderer:
   m_ObjectHideFlags: 0
