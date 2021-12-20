@@ -60,7 +60,7 @@ public class Door : MonoBehaviour{
                 if (GameHandler.scoreValue >= 10){
                     SceneManager.LoadScene("WinA");
                     //GameHandler.scoreValue = 0; 
-                } else if (GameHandler.scoreValue == 7){
+                } else if (GameHandler.scoreValue >= 7){
                     SceneManager.LoadScene("WinB");
                     //GameHandler.scoreValue = 0; 
                 } else if (GameHandler.scoreValue >= 3){ 
