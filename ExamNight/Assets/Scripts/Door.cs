@@ -57,18 +57,19 @@ public class Door : MonoBehaviour{
         if(open){
             // doorOpen.Play();
             if (this.gameObject.tag == "Finish"){
-                if (GameHandler.scoreValue >= 5){
+                if (GameHandler.scoreValue >= 10){
                     SceneManager.LoadScene("WinA");
                     //GameHandler.scoreValue = 0; 
-                } else if (GameHandler.scoreValue == 4){
+                } else if (GameHandler.scoreValue == 7){
                     SceneManager.LoadScene("WinB");
                     //GameHandler.scoreValue = 0; 
-                } else if (GameHandler.scoreValue >= 2){ 
+                } else if (GameHandler.scoreValue >= 3){ 
                     SceneManager.LoadScene("WinC");        
                     //GameHandler.scoreValue = 0;                           
-                } else if (GameHandler.scoreValue == 1){ 
-                    SceneManager.LoadScene("WinD");
-                    //GameHandler.scoreValue = 0;                         
+                } else if (GameHandler.scoreValue >= 1){ 
+                    SceneManager.LoadScene("WinD");     
+                } else {
+                    
                 }
             }
             
