@@ -7,14 +7,36 @@ public class AudioSourceLoop : MonoBehaviour
 {
     public AudioSource happySound;
     public AudioSource tenseSound;
+    public static bool changeMusic = false;
+    public static bool existed = false;
 
-    void Start()
+    void Awake()
     {
-      if (Follow.gameTime > 150){
+      // if (Follow.gameTime > 150){
+      //   happySound.Play();
+      // }
+      // else{
+      //   tenseSound.Play();
+      // }
+      if (!existed){
+      
+      
         happySound.Play();
+      
+        DontDestroyOnLoad(this.gameObject);
+        existed = true;
       }
       else{
-        tenseSound.Play();
+         Destroy(this.gameObject);
+      }
+      
+    }
+    
+    void Update(){
+      if (Follow.gameTime < 150 & !changeMusic){
+          happySound.Stop();
+          tenseSound.Play();  
+          changeMusic = true;    
       }
     }
 
