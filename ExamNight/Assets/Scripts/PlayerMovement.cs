@@ -99,8 +99,8 @@ public class PlayerMovement : MonoBehaviour
 		if(hasRamen){
 			booster.SetActive(false);
 			bTimer += 0.02f;
+			animator.SetBool("ramen", true);
 	        if (bTimer >= 1f){
-				animator.SetBool("ramen", true);
 		        Debug.Log("Boost");
 				bTime -= 1;
 				bTimer = 0;
