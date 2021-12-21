@@ -46,9 +46,9 @@ public class Pickups : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if (this.gameObject.tag == "Note"){
 			if (other.gameObject.tag == "Player"){
-				GameHandler.scoreValue += 1; 
+                Destroy(gameObject);
+                GameHandler.scoreValue += 1; 
 				gameHandler.gotNote(pickUpName);
-				Destroy(gameObject);
                 // ParticleSystem.Play();
                 GameObject ps = Instantiate(particlesPrefab, particleSpawn.position, Quaternion.identity);
             }   

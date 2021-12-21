@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca85a5f627c44f889547acd16d7115a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7769069379316636206}
+  enemy: {fileID: 0}
   rb: {fileID: 0}
   MyMovement: {fileID: 0}
   new_speed: 10
@@ -116,7 +116,6 @@ MonoBehaviour:
   new_speed: 10
   open: 0
   pickUpName: 
-  upgrade: {fileID: 0}
   particlesPrefab: {fileID: 93463744372347256, guid: 734c49e5c684c4bafbb505ee1881bab3, type: 3}
   particleSpawn: {fileID: 0}
 --- !u!1 &7769069379752116856
