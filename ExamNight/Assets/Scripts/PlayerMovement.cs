@@ -97,24 +97,27 @@ public class PlayerMovement : MonoBehaviour
         }
 		
 		if(hasRamen){
-			StartCoroutine(Boost());
+			booster.SetActive(false);
 			bTimer += 0.02f;
 	        if (bTimer >= 1f){
+				animator.SetBool("ramen", true);
+		        Debug.Log("Boost");
 				bTime -= 1;
 				bTimer = 0;
 				moveSpeed = 10;
 				jumpSpeed = 10;
 				if (bTime <=0){
 					bTime=ramenBoostTime;
-					booster.SetActive(true);
 					hasRamen = false;
 					moveSpeed = startMoveSpeed;
 					jumpSpeed = startJumpSpeed;
+					animator.SetBool("ramen", false);
 				}
 	        }
 			Text timeTextC = bText.GetComponent<Text>();
 	        timeTextC.text = "RAMEN TIME: " + bTime; 
 		} else {
+			booster.SetActive(true);
 			Text timeTextC = bText.GetComponent<Text>();
 			timeTextC.text = " "; 
 			bTime = ramenBoostTime;
@@ -123,17 +126,17 @@ public class PlayerMovement : MonoBehaviour
   
   IEnumerator Boost()
     {
-        animator.SetBool("ramen", true);
-        booster.SetActive(false);
-        //Print the time of when the function is first called.
-        Debug.Log("Boost");
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
+        // animator.SetBool("ramen", true);
+        // booster.SetActive(false);
+        // //Print the time of when the function is first called.
+        // Debug.Log("Boost");
+		// 
+        // //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(ramenBoostTime);
-
-        //After we have waited 5 seconds print the time again.
-		// Collide.hasRamen = false;
-        animator.SetBool("ramen", false);
+		// 
+        // //After we have waited 5 seconds print the time again.
+		// // Collide.hasRamen = false;
+        // animator.SetBool("ramen", false);
     }
 
   void OnCollisionEnter2D(Collision2D other){
