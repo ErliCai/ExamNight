@@ -9,6 +9,7 @@ public class AudioSourceLoop : MonoBehaviour
     public AudioSource tenseSound;
     public static bool changeMusic = false;
     public static bool existed = false;
+    public static float volume;
 
     void Awake()
     {
@@ -31,7 +32,8 @@ public class AudioSourceLoop : MonoBehaviour
       }
       
     }
-    
+
+
     // void Update(){
     //   if (Follow.gameTime < 150 & !changeMusic){
     //       happySound.Stop();

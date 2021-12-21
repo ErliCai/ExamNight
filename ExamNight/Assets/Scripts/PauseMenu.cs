@@ -63,6 +63,9 @@ public class PauseMenu : MonoBehaviour
 	public void SetLevel (float sliderValue){
 		mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
 		volumeLevel = sliderValue;
+		AudioSourceLoop.volume = sliderValue;
+		AudioListener.volume = sliderValue;
+		Debug.Log(sliderValue);
 	}
 
 	public void StartTutorial(){
