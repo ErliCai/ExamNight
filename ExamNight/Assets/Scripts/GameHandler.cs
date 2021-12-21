@@ -42,6 +42,18 @@ public class GameHandler : MonoBehaviour
 				firstTimeInIntroLevel = false;
 			}
         }
+        if (SceneName == "Start"){
+            libraryNote1 = true;
+        	libraryNote2 = true;
+            dormNote1 = true;
+        	dormNote2 = true;
+            lockersNote1 = true;
+        	lockersNote2 = true;
+            studyNote1 = true;
+        	studyNote2 = true;
+            classNote1 = true;
+        	classNote2 = true;
+		}
     }
 
     void Start(){
@@ -52,7 +64,7 @@ public class GameHandler : MonoBehaviour
     void Update()
     {
         if (SceneName == "Tutorial"){
-            score.text = "NOTES: " + scoreValue + "/45";
+            score.text = "NOTES: " + scoreValue + "/35";
         } 
 
 		else {
