@@ -53,6 +53,8 @@ public class GameHandler : MonoBehaviour
         	studyNote2 = true;
             classNote1 = true;
         	classNote2 = true;
+            PlayerMovement.bTime = 20;
+            PlayerMovement.hasRamen = false;
 		}
     }
 
