@@ -32,12 +32,12 @@ public class AudioSourceLoop : MonoBehaviour
       
     }
     
-    void Update(){
-      if (Follow.gameTime < 150 & !changeMusic){
-          happySound.Stop();
-          tenseSound.Play();  
-          changeMusic = true;    
-      }
-    }
+    // void Update(){
+    //   if (Follow.gameTime < 150 & !changeMusic){
+    //       happySound.Stop();
+    //       tenseSound.Play();  
+    //       changeMusic = true;    
+    //   }
+    // }
 
 }
